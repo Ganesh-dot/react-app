@@ -1,0 +1,101 @@
+.formInput{
+    margin: -14% 0% 0% 36%;
+}
+.makeItEasy{
+    font-size: 19px;
+    color: #333333;
+    margin: 0px 0px 5px 0px;  
+}
+.h1{
+    color: #333333;
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2px 0px 10px 0px;
+}
+.nameInput , .nameInput1{
+    padding: 8px 10px;
+    border-radius: 3px;
+    border: 1px solid #bdc7d8;
+    height: 26px;
+    width: 340px;
+    margin: 8px 8px 0px 0px;
+}
+.nameInput2 , .nameInput3{
+    padding: 8px 10px;
+    border-radius: 3px;
+    border: 1px solid #bdc7d8;
+    height: 26px;
+    width: 340px;
+    margin: 8px 0px 0px 0px;
+}
+.nameInput , .nameInput1 , .nameInput2 , .nameInput3::placeholder{
+    font-size: 18px;
+}
+.bday , .genderinput{
+    color: #90949c;
+    margin: 20px 0px 5px 0px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.dateinput{
+    padding: 2px 2px 2px 2px;
+}
+.material-icons{
+    margin: 0px 0px 0px 8px;
+}
+.choosegender{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 5px 0px 1px;
+    color: #1D2129;
+}
+.choose{
+    padding: 5px 0px 5px 4px;
+}
+.paragraph{
+    font-size: 11px;
+    color: #777;
+    width: 350px;
+    margin: 16px 0px 0px 0px;
+}
+.termlink , .datalink , .cookielink{
+    text-decoration: none;
+    color: #385898;
+}
+.cookielink:hover{
+    text-decoration: underline;
+}
+.datalink:hover{
+    text-decoration: underline;
+}
+.termlink:hover{
+    text-decoration: underline;
+}
+.btn{
+    border-radius: 10px;
+    border: none;
+    margin: 18px 0px 0px 0px;
+    width: 194px;
+    height: 39px;
+    background-color: #69A74E;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.horizental{
+    opacity: 0.2;
+    width: 450px;
+    margin: 22px 0px 0px 0px;
+}
+.paragraph1{
+    font-size: 13px;
+    color: #666;
+    font-weight: bold;
+    margin: 20px 0px 0px 0px;
+}
+.page{
+    text-decoration: none;
+}
+.page:hover{
+    text-decoration: underline;
+}

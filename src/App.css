@@ -4,9 +4,7 @@ body{
 .App-header{
   height: 80px;
   background-color: brown;
-  
 }
 .header-text{
   text-align: center;
-  vertical-align: baseline;
 }

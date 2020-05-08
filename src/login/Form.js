@@ -34,7 +34,7 @@ class Form extends React.Component {
           </div>
         </div>
         <p className="paragraph">By clicking Sign Up, you agree to our <a href="https://www.facebook.com/legal/terms/update" className="termlink">Terms</a>, <a href="https://www.facebook.com/about/privacy/update" className="datalink">Data Policy</a> and <a href="https://www.facebook.com/policies/cookies/" className="cookielink">Cookie Policy</a>. You may receive SMS notifications from us and can opt out at any time.</p>
-        <button id="clickbtn" className="btn" value="Sign Up">Sign Up</button>
+        <button onClick={this.showList} id="clickbtn" className="btn" value="Sign Up">Sign Up</button>
         <hr className="horizental" />
 
         <p className="paragraph1"><a href="https://www.facebook.com/pages/create/?ref_type=registration_form" className="page">Create a Page</a> for a celebrity, band or business.</p>

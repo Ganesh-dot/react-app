@@ -1,5 +1,5 @@
 .arrowList li{
-    padding: 4px 5px 4px 5px;
+    padding: 5px 10px 5px 10px;
 }
 .arrowList li:hover{
     cursor: pointer;
@@ -11,9 +11,12 @@
     opacity: 0.4;
 }
 .arrowList{
-    width: 150px;
-    border-radius: 2px;
-    margin: 4px 0px 0px 80%;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid #1d2129;
+    width: 200px;
+    border-radius: 4px;
+    margin: 47px 0% 0px -100%;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     color: #1D2129;

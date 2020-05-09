@@ -6,7 +6,8 @@ import './Dropdown.css';
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isToggleOn: false };
+    this.state =
+      { isToggleOn: false };
     this.updateState = this.updateState.bind(this);
   }
   updateState() {

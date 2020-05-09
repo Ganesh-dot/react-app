@@ -1,19 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header.js";
+import './header.css';
+import Dropdown from "./Dropdown.js";
+import './Dropdown.css';
+import Form from "./login/Form.js";
+import './login/Form.css';
+// import Click from "./Click.js"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
-        <p>
-          First react app from ganesh
-        </p>
-      </header>
-    </div>
-  );
-}
+    <div>
+      <Header />
 
+      <Form />
+
+    </div>
+  )
+};
 export default App;

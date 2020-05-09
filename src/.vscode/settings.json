@@ -1,0 +1,18 @@
+{
+    "editor.formatOnSave": false,
+    "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.detectIndentation": true,
+    "editor.autoIndent": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.detectIndentation": true,
+    "editor.autoIndent": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+    },
+    }

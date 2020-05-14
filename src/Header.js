@@ -7,7 +7,9 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state =
-      { isToggleOn: false };
+    {
+      isToggleOn: false
+    };
     this.updateState = this.updateState.bind(this);
   }
   updateState() {
@@ -64,7 +66,6 @@ class Header extends React.Component {
             <Dropdown />
           )
         }
-
       </div>
 
     )

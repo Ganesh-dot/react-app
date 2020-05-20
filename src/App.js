@@ -12,6 +12,7 @@ function App() {
       <Header />
       <Dropdown />
       <Form />
+      <head />
     </div>
   )
 };

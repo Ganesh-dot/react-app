@@ -4,71 +4,48 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      fName: "",
-      fnameError: "",
-      lName: "",
-      lnameError: "",
-      email: "",
-      emailError: ""
+      fields: {},
+      errors: {}
     }
-    this.fnameVerify = this.fnameVerify.bind(this);
-    this.lnameVerify = this.lnameVerify.bind(this);
-    this.emailVerify = this.emailVerify.bind(this);
-    this.fnameHandler = this.fnameHandler.bind(this);
-    this.lnameHandler = this.lnameHandler.bind(this);
-    this.emailHandler = this.emailHandler.bind(this);
-    this.fError = this.fError.bind(this);
-    this.lError = this.lError.bind(this);
-    this.eError = this.eError.bind(this);
-  }
-  fError = (event) => {
-    this.setState({ fnameError: event.target.value })
-  }
-  lError = (event) => {
-    this.setState({ lnameError: event.target.value })
-  }
-  eError = (event) => {
-    this.setState({ emailError: event.target.value })
-  }
-  fnameHandler = (event) => {
-    this.setState({ fName: event.target.value })
-  }
-  lnameHandler = (event) => {
-    this.setState({ lName: event.target.value })
-  }
-  emailHandler = (event) => {
-    this.setState({ email: event.target.value })
-  }
+  };
 
-  fnameVerify = event => {
-    let fnameError = " ";
-    if (this.state.fName || this.state.fName < 3) {
-      fnameError = "Name is Empty";
-      return false;
+  handleValidation() {
+    let fields = this.state.fields;
+    let errors = {};
+
+    if (!fields["name"] || !fields["name"] > 3) {
+      errors["name"] = "Please Enter Valid Name";
     } else {
-      this.fnameError = "Valid Name";
-      return true;
+      errors["name"] = "Valid name";
     }
+    this.setState({ errors: errors });
   }
-  lnameVerify = () => {
-    let lnameError = " ";
-    if (this.state.lName || this.state.lName < 3) {
-      lnameError = "Enter last name";
-      return false;
+  handleLastName() {
+    let fields = this.state.fields;
+    let errors = {};
+
+    if (!fields["lname"] || !fields["lname"] > 3) {
+      errors["lname"] = "Please Enter Valid lastName";
     } else {
-      this.lnameError = "Valid Last Name";
-      return true;
+      errors["lname"] = "Valid Last Name";
     }
+    this.setState({ errors: errors });
   }
-  emailVerify = () => {
-    let emailError = " ";
-    if (this.state.email.includes("@")) {
-      emailError = "Invalid Email";
-      return false;
+  handleEmail() {
+    let fields = this.state.fields;
+    let errors = {};
+
+    if (!fields["email"]) {
+      errors["email"] = "Invalid Email or mobile";
     } else {
-      this.emailError = "Valid Email";
-      return true;
+      errors["email"] = "Valid Email or Number";
     }
+    this.setState({ errors: errors });
+  }
+  handleChange(field, e) {
+    let fields = this.state.fields;
+    fields[field] = e.target.value;
+    this.setState({ fields });
   }
 
   render() {
@@ -78,34 +55,34 @@ class Form extends React.Component {
         <p className="makeItEasy">it's quick and easy</p>
         <div id="myForm" name="vForm">
           <input id="text1"
-            onChange={this.fnameHandler}
-            onBlur={e => this.fnameVerify(e)}
-            value={this.state.fName}
+            onBlur={this.handleValidation.bind(this, "name")}
+            onChange={this.handleChange.bind(this, "name")}
+            value={this.state.fields["name"]}
             className="nameInput"
-            name="fName"
+            name="fname"
             type="text"
             placeholder="First name" />
-          <p style={{ color: "red", fontSize: 12 }}>{this.state.fnameError}</p>
+          <p style={{ color: "red" }}>{this.state.errors["name"]}</p>
           <input
             id="text2"
-            onChange={this.lnameHandler}
-            onBlur={() => this.lnameVerify}
-            value={this.state.lName}
+            onBlur={this.handleLastName.bind(this, "lname")}
+            onChange={this.handleChange.bind(this, "lname")}
+            value={this.state.fields["lname"]}
             className="nameInput1"
-            name="lName"
+            name="lname"
             type="text"
             placeholder="Last name" />
-          <p style={{ color: "red", fontSize: 12 }}>{this.state.lnameError}</p>
+          <p style={{ color: "red" }}>{this.state.errors["lname"]}</p>
           <input
+            onBlur={this.handleEmail.bind(this, "email")}
+            onChange={this.handleChange.bind(this, "email")}
+            value={this.state.fields["email"]}
             id="text3"
-            onChange={this.emailHandler}
-            onBlur={() => this.emailVerify}
-            value={this.state.email}
             className="nameInput2"
             name="num"
             type="tel"
             placeholder="mobile number or Email address" />
-          <p style={{ color: "red", fontSize: 12 }}>{this.state.emailError}</p>
+          <p style={{ color: "red" }}>{this.state.errors["email"]}</p>
           <input
             id="text4"
             className="nameInput3"
